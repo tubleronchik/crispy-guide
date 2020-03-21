@@ -6,9 +6,9 @@ Using **pyInstagram** for getting data.
 ***
 
 ### Installation  
-''' bash
+```bash
 1. git clone https://github.com/olegyurchik/pyInstagram.git
 2. cd pyInstagram
 3. pip3 install .
-'''
+```
 

@@ -1,10 +1,11 @@
-Athena project
+**Athena project**
 
 The Greek goddess statue with a heart in her chest that pumps after tags/commets in Instagram
 
-Using pyInstagram for getting data.
+Using **pyInstagram** for getting data.
+***
 
-Installation  
+**Installation**  
 
 1. git clone https://github.com/olegyurchik/pyInstagram.git
 2. cd pyInstagram

@@ -8,6 +8,7 @@ account = Account("zuck")
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(12, GPIO.OUT)
 pwm = GPIO.PWM(12, 50)
+time.sleep(10)
 
 posts = agent.get_media(account, pointer=None, count=5)
 res = list(list(posts)[0])
@@ -39,7 +40,7 @@ while True:
 					print("Beats")
 					pwm.start(8)
 					time.sleep(1)
-					pwm.stop()
+					pwm.ChangeDutyCycle(7)
 
 		likes = []
 		likes_prev = []

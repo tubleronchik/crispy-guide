@@ -1,8 +1,13 @@
 import time
 from instagram import Account, Media, WebAgent, Story, Location, Tag, Comment
+import RPi.GPIO as GPIO
 
 agent = WebAgent()
 account = Account("zuck")
+
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(12, GPIO.OUT)
+pwm = GPIO.PWM(12, 50)
 
 posts = agent.get_media(account, pointer=None, count=5)
 res = list(list(posts)[0])
@@ -32,6 +37,9 @@ while True:
 
 			if likes_prev[i] < likes[i] or comments_prev[i] < comments[i]:
 					print("Beats")
+					pwm.start(8)
+					time.sleep(1)
+					pwm.stop()
 
 		likes = []
 		likes_prev = []

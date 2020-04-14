@@ -1,0 +1,17 @@
+<package>
+  <description brief="athena_heart">
+
+     athena_heart
+
+  </description>
+  <author>alena</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/athena_heart</url>
+  <depend package="std_msgs"/>
+  <depend package="rospy"/>
+  <depend package="roscpp"/>
+
+</package>
+
+

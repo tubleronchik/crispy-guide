@@ -12,7 +12,7 @@ def instagram():
 		str = "hello world %s"%rospy.get_time()
 		rospy.loginfo(str)
 		pub.publish(String(str))
-		rospy.sleep(1.0)
+		rospy.sleep(3.0)
 if __name__ == '__main__':
 	try:
 		instagram()

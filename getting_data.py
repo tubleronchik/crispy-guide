@@ -1,4 +1,5 @@
 import time
+import instagram
 from instagram import Account, Media, WebAgent, Story, Location, Tag, Comment
 
 agent = WebAgent()
@@ -11,6 +12,7 @@ likes = []
 likes_prev = []
 comments = []
 comments_prev = []
+import requests
 while True:
 	media = Media(res[i])
 	likes.append(media.likes_count)
@@ -23,22 +25,24 @@ while True:
 		comments_prev = comments
 		comments = []
 		time.sleep(3)	
+		try:
+			for i in range(len(res)):
+				media = Media(res[i])
+				agent.update(media)
+				likes.append(media.likes_count)
+				comments.append(media.comments_count)
 
-		for i in range(len(res)):
-			media = Media(res[i])
-			agent.update(media)
-			likes.append(media.likes_count)
-			comments.append(media.comments_count)
+				if likes_prev[i] < likes[i] or comments_prev[i] < comments[i]:
+						print("Beats")
 
-			if likes_prev[i] < likes[i] or comments_prev[i] < comments[i]:
-					print("Beats")
+			likes = []
+			likes_prev = []
+			comments = []
+			comments_prev = []
+			i = 0
 
-		likes = []
-		likes_prev = []
-		comments = []
-		comments_prev = []
-		i = 0
-
+		except requests.HTTPError:
+			time.sleep(10)
 
 
 

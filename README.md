@@ -33,4 +33,8 @@ Install GPIO library for python
 1. sudo apt-get update
 2. sudo apt-get install python3-rpi.gpio
 ```
-
+Install tmux
+```bash
+1. sudo apt-get update
+2. sudo apt-get install tmux
+```

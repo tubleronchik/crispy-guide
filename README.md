@@ -28,13 +28,9 @@ network={
 ```
 Then you'll be able to connect with Raspberry via ssh.
 
-Install GPIO library for python
+Install tmux and GPIO library for python
 ```bash
 1. sudo apt-get update
 2. sudo apt-get install python3-rpi.gpio
-```
-Install tmux
-```bash
-1. sudo apt-get update
-2. sudo apt-get install tmux
+3. sudo apt-get install tmux
 ```

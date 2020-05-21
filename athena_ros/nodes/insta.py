@@ -53,6 +53,7 @@ def data():
 
                 except requests.HTTPError:
                         time.sleep(10)
+                        agent.update(media)
 
 if __name__ == '__main__':
     try:

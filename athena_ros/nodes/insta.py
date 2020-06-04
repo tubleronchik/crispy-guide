@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import rospy
+import requests
 from std_msgs.msg import String
 import time
 from instagram import Account, Media, WebAgent, Story, Location, Tag, Comment
@@ -52,6 +53,7 @@ def data():
 
                 except requests.HTTPError:
                         time.sleep(10)
+                        agent.update(media)
 
 if __name__ == '__main__':
     try:

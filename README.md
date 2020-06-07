@@ -34,7 +34,7 @@ Install tmux and GPIO library for python
 2. sudo apt-get install python3-rpi.gpio
 3. sudo apt-get install tmux
 ```
-To change network name and password use
+To add network name and password use
 ```bash
 sudo ./wifi.sh new-name new-pass
 ```

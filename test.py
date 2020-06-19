@@ -4,7 +4,7 @@ from instagram import Account, Media, WebAgent, Story, Location, Tag, Comment
 agent = WebAgent()
 account = Account("acc")
 
-posts = agent.get_media(account, pointer=None, count=5)
+posts = agent.get_media(account, pointer=None, count=100)
 res = list(list(posts)[0])
 i = 0 #counts of posts
 likes = []

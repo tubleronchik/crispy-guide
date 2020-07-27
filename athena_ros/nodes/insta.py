@@ -7,7 +7,7 @@ from std_msgs.msg import String
 import time
 from instagram import Account, Media, WebAgent, Story, Location, Tag, Comment
 agent = WebAgent()
-account = Account("mixit_ru")
+account = Account("account")
 
 posts = agent.get_media(account, pointer=None, count=5)
 
@@ -21,7 +21,7 @@ def tag(url):
     count = request[beg_ind:end_ind]
     return (int((re.search('\d+', count)).group()))	
 
-url_tag = 'https://www.instagram.com/explore/tags/home/?__a=1' #link for hashtag
+url_tag = 'https://www.instagram.com/explore/tags/tag_name/?__a=1' #link for hashtag
 
 def followers(url):
     begin = "count"
@@ -32,7 +32,7 @@ def followers(url):
     count = request[beg_ind:end_ind]
     return (int((re.search('\d+', count)).group()))
 
-url_followers = 'https://www.instagram.com/who/?__a=1' #link for account
+url_followers = 'https://www.instagram.com/account_name/?__a=1' #link for account
 
 def data():
     res = list(list(posts)[0])

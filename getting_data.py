@@ -43,7 +43,7 @@ def followers(url):
 
 
 url_followers = 'https://www.instagram.com/who/?__a=1' #link for account
-
+ch = 0
 while True:
 	media = Media(res[i])
 	likes.append(media.likes_count)
@@ -60,7 +60,7 @@ while True:
 		tags = []
 		foll_prev = foll
 		foll = []
-		time.sleep(3)	
+		time.sleep(5)	
 		try:
 			for i in range(len(res)):
 				media = Media(res[i])
@@ -71,6 +71,8 @@ while True:
 				foll.append(followers(url_followers))
 				if likes_prev[i] < likes[i] or comments_prev[i] < comments[i] or tags_prev[i] < tags[i] or foll_prev[i] < foll[i]:
 						print("Beats")
+						print(ch)
+						ch += 1
 
 			likes = []
 			likes_prev = []
